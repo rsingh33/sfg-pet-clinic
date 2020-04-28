@@ -95,6 +95,7 @@ public class DataLoader implements CommandLineRunner {
         ownerService.save(owner1);
         ownerService.save(owner2);
 
+
         System.out.println("Loaded Owners into Map .....");
 
         Vet vet1 = new Vet();
