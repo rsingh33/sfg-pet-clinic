@@ -22,7 +22,7 @@ public class OwnerController {
     }
 
     @GetMapping({"/find"})
-    public String errorHandler() {
+    public String findOwners() {
         return "owner/notimplemented";
     }
 }
