@@ -1,10 +1,7 @@
 package guru.springframework.sfgpetclinic.bootstrap;
 
 import guru.springframework.sfgpetclinic.model.*;
-import guru.springframework.sfgpetclinic.services.OwnerService;
-import guru.springframework.sfgpetclinic.services.PetTypeService;
-import guru.springframework.sfgpetclinic.services.SpecialityService;
-import guru.springframework.sfgpetclinic.services.VetService;
+import guru.springframework.sfgpetclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,16 +14,18 @@ public class DataLoader implements CommandLineRunner {
     private final OwnerService ownerService;
     private final PetTypeService petTypeService;
     private final SpecialityService specialityService;
+    private final VisitService visitService;
 
     public DataLoader(VetService vetService,
                       OwnerService ownerService,
                       PetTypeService petTypeService,
-                      SpecialityService specialityService) {
+                      SpecialityService specialityService, VisitService visitService) {
 
         this.vetService = vetService;
         this.ownerService = ownerService;
         this.petTypeService = petTypeService;
         this.specialityService = specialityService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -94,6 +93,14 @@ public class DataLoader implements CommandLineRunner {
 
         ownerService.save(owner1);
         ownerService.save(owner2);
+
+
+        Visit priasPetVisit = new Visit();
+        priasPetVisit.setPet(priasPet);
+        priasPetVisit.setDate(LocalDate.now());
+        priasPetVisit.setDescription("Sneezy Dog");
+
+        visitService.save(priasPetVisit);
 
 
         System.out.println("Loaded Owners into Map .....");
