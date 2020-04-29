@@ -26,6 +26,7 @@ public class Owner extends Person {
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
     private Set<Pet> pets = new HashSet<>();
 
+    //Builder Pattern Lombok
     @Builder
     public Owner(Long id,
                  String firstName,
