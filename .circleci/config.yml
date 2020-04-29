@@ -11,5 +11,12 @@ workflows:
     # Run the welcome/run job in its own container
     jobs:
       - welcome/run
-    - run: mvn integration:test
+
+  maven: circleci/maven@x.y
+  version: 2.1
+  workflows:
+    maven_test:
+      jobs:
+        - maven/test:
+            command: '-X verify'
 
