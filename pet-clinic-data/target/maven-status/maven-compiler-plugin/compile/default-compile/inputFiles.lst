@@ -3,7 +3,6 @@
 /Users/Rahul/Documents/Workspace/sfg/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/model/BaseEntity.java
 /Users/Rahul/Documents/Workspace/sfg/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/services/map/AbstractMapService.java
 /Users/Rahul/Documents/Workspace/sfg/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/model/Person.java
-/Users/Rahul/Documents/Workspace/sfg/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/services/map/VisitServiceMap.java
 /Users/Rahul/Documents/Workspace/sfg/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/services/map/PetMapService.java
 /Users/Rahul/Documents/Workspace/sfg/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/repositories/OwnerRepository.java
 /Users/Rahul/Documents/Workspace/sfg/sfg-pet-clinic/pet-clinic-data/src/main/java/guru/springframework/sfgpetclinic/services/OwnerService.java

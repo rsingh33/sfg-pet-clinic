@@ -2,7 +2,6 @@ guru/springframework/sfgpetclinic/services/springdatajpa/OwnerSDJpaService.class
 guru/springframework/sfgpetclinic/model/Pet.class
 guru/springframework/sfgpetclinic/services/springdatajpa/SpecialitySDJpaService.class
 guru/springframework/sfgpetclinic/services/CrudService.class
-guru/springframework/sfgpetclinic/services/map/VisitServiceMap.class
 guru/springframework/sfgpetclinic/model/Visit.class
 guru/springframework/sfgpetclinic/services/springdatajpa/VetSDJpaService.class
 guru/springframework/sfgpetclinic/repositories/OwnerRepository.class
