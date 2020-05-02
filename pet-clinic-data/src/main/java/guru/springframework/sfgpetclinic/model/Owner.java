@@ -13,6 +13,7 @@ import java.util.Set;
 @Getter
 @NoArgsConstructor
 @Entity
+//@ToString(exclude = "pets")
 @Table(name = "owners")
 public class Owner extends Person {
 
