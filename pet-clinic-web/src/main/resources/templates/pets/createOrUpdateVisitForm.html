@@ -19,6 +19,7 @@
     </tr>
     </thead>
     <tr>
+        <!--/*@thymesVar id="pet" type="guru.springframework.sfgpetclinic.model.Pet"*/-->
         <td th:text="${pet.name}" /></td>
         <td
                 th:text="${#temporals.format(pet.birthDate, 'yyyy-MM-dd')}" /></td>
@@ -35,6 +36,7 @@
         <input
                 th:replace="~{fragments/inputField :: input ('Description', 'description', 'text')}" />
     </div>
+    <!--/*@thymesVar id="pet" type="guru.springframework.sfgpetclinic.model.Pet"*/-->
 
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
@@ -51,6 +53,8 @@
         <th>Date</th>
         <th>Description</th>
     </tr>
+    <!--/*@thymesVar id="pet" type="guru.springframework.sfgpetclinic.model.Pet"*/-->
+
     <tr th:if="${!visit['new']}" th:each="visit : ${pet.visits}">
         <td th:text="${#temporals.format(visit.date, 'yyyy-MM-dd')}" /></td>
         <td th:text=" ${visit.description}" /></td>
