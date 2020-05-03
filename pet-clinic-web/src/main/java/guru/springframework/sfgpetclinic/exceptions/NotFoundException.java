@@ -1,4 +1,4 @@
-package guru.springframework.sfgpetclinic.model.exceptions;
+package guru.springframework.sfgpetclinic.exceptions;
 
 public class NotFoundException extends RuntimeException{
     public NotFoundException(){
