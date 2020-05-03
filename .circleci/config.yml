@@ -2,8 +2,17 @@ version: 2.1
 
 orbs:
   maven: circleci/maven@0.0.12
+  orbs:
+    codecov: codecov/codecov@1.0.2
+  jobs:
+    build:
+      steps:
+        - codecov/upload:
+            file: {{ coverage_report_filepath }}
+            command: bash <(curl -s https://codecov.io/bash)
 
+# checkout, build, test, and upload test results
 workflows:
   maven_test:
     jobs:
-      - maven/test # checkout, build, test, and upload test results
+      - maven/test
