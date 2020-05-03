@@ -5,6 +5,7 @@ guru/springframework/sfgpetclinic/services/CrudService.class
 guru/springframework/sfgpetclinic/model/Visit.class
 guru/springframework/sfgpetclinic/services/springdatajpa/VetSDJpaService.class
 guru/springframework/sfgpetclinic/repositories/OwnerRepository.class
+guru/springframework/sfgpetclinic/model/exceptions/NotFoundException.class
 guru/springframework/sfgpetclinic/services/PetTypeService.class
 guru/springframework/sfgpetclinic/services/VisitService.class
 guru/springframework/sfgpetclinic/services/map/VisitMapService.class

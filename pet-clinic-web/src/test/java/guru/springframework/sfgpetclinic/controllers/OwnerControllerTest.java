@@ -11,9 +11,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 import static org.hamcrest.Matchers.*;
 import static org.mockito.ArgumentMatchers.anyLong;
@@ -79,6 +77,21 @@ class OwnerControllerTest {
                 .andExpect(view().name("redirect:/owners/1"));
     }
 
+    @Test
+    void processFindFormEmptyReturnMany() throws Exception {
+        List<Owner> owners = new ArrayList<>();
+        owners.add(Owner.builder().id(1L).build());
+        owners.add(Owner.builder().id(2L).build());
+
+        when(ownerService.findAllByLastNameIsLike(anyString())).thenReturn(owners);
+
+        mockMvc.perform(get("/owners/")
+                .param("lastName" ,""))
+                .andExpect(status().isOk())
+                .andExpect(view().name("owner/ownersList"))
+                .andExpect(model().attribute("selections",hasSize(2)));
+
+    }
     @Test
     void showOwner() throws Exception {
         Owner owner = Owner.builder().id(2L).firstName("Rahul").build();
